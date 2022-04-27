@@ -27,11 +27,20 @@ scene.add(plane);
 // create a cube
 var cubeGeometry = new THREE.BoxGeometry(4, 4, 4);
 var cubeMaterial = new THREE.MeshNormalMaterial();
+
+
 var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+var cube2 = new THREE.Mesh(cubeGeometry, cubeMaterial);
+var cube3 = new THREE.Mesh(cubeGeometry, cubeMaterial);
+ 
 // position the cube
 cube.position.set(0.0, 2.0, 0.0);
+cube2.position.set(6.0, 2.0, 0.0);
+cube3.position.set(-6.0, 2.0, 0.0);
 // add the cube to the scene
 scene.add(cube);
+scene.add(cube2);
+scene.add(cube3);
 
 // Use this to show information onscreen
 var controls = new InfoBox();
