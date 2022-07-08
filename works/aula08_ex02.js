@@ -25,10 +25,10 @@ dirLight.castShadow = true;
 dirLight.shadow.mapSize.width = 256
 dirLight.shadow.mapSize.height = 256
 dirLight.shadow.camera.near = 0.1
-dirLight.shadow.camera.far = 100
+dirLight.shadow.camera.far = 400
 dirLight.shadow.camera.left = -20
 dirLight.shadow.camera.right = 20
-dirLight.shadow.camera.bottom = -10
+dirLight.shadow.camera.bottom = -20
 dirLight.shadow.camera.top = 20
 
 scene.add(dirLight);

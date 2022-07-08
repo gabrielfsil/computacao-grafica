@@ -52,6 +52,8 @@ var cylinderGeometry3 = new THREE.CylinderGeometry(0.08, 0.08, 1.0, 25);
 var cylinderMaterial3 = new THREE.MeshPhongMaterial({ color: 'rgb(200,200,0)' });
 var cylinder3 = new THREE.Mesh(cylinderGeometry3, cylinderMaterial3);
 var cylinder4 = new THREE.Mesh(cylinderGeometry3, cylinderMaterial3);
+
+cylinder4.add(axesHelper)
 cylinder2.add(cylinder3);
 cylinder2.add(cylinder4);
 
@@ -86,7 +88,7 @@ function rotateCylinder() {
     cylinder.matrix.multiply(mat4.makeTranslation(0.0, 1.0, 0.0)); // T1
 
     // Will execute R2, T1 and R1 in this order
-    cylinder2.matrix.multiply(mat4.makeRotationY(angle2)); // R1
+    // cylinder2.matrix.multiply(mat4.makeRotationY(angle2)); // R1
     cylinder2.matrix.multiply(mat4.makeTranslation(0.0, 1.0, 0.0)); // T1
     cylinder2.matrix.multiply(mat4.makeRotationX(degreesToRadians(90))); // R2
 
@@ -94,7 +96,7 @@ function rotateCylinder() {
     cylinder3.matrix.multiply(mat4.makeTranslation(0, 0.5, 0.0)); // T1
     cylinder3.matrix.multiply(mat4.makeRotationX(degreesToRadians(90))); // R2
 
-    cylinder4.matrix.multiply(mat4.makeRotationY(-angle3)); // R1 
+    // cylinder4.matrix.multiply(mat4.makeRotationY(-angle3)); // R1 
     cylinder4.matrix.multiply(mat4.makeTranslation(0, -0.5, 0.0)); // T1
     cylinder4.matrix.multiply(mat4.makeRotationX(degreesToRadians(-90))); // R2
   }
